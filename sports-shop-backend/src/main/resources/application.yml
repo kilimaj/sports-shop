@@ -1,3 +1,21 @@
+server:
+  port: 9090
+
 spring:
   application:
     name: sports-shop-backend
+  datasource:
+    url: jdbc:mysql://localhost:3307/sports-shop
+    username: root
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL8Dialect
+          format_sql: true
+
+  
